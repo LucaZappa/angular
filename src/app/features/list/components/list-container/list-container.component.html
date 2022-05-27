@@ -1,0 +1,18 @@
+<table class="center" *ngIf="!loading">
+    <tr>
+        <th>todo</th>
+        <th>status</th>
+        <th>datainizio</th>
+        <th>datafine</th>
+    </tr>
+    <tr *ngFor="let list of listList">
+        <td>{{list.todo}}</td>
+        <td>{{list.status}}</td>
+        <td>{{list.datacreazione}}</td>
+        <td>{{list.datafine}}</td>
+        <td><input type="button" id="elimina" name="elimina" (click)="cancella(list.id)" value="rimuovi"></td>
+
+        
+    </tr>
+
+</table>
