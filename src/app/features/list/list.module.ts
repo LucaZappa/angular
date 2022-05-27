@@ -4,12 +4,16 @@ import { ListContainerComponent } from './components/list-container/list-contain
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RoutingListModule } from './routing-list.module';
 import { FormsModule } from '@angular/forms';
+import { ListPostComponent } from './components/list-post/list-post.component';
+import { ListPutComponent } from './components/list-put/list-put.component';
 
-
+//modulo delle componenti list
 
 @NgModule({
   declarations: [
-    ListContainerComponent
+    ListContainerComponent,
+    ListPostComponent,
+    ListPutComponent
   ],
   imports: [
     CommonModule,

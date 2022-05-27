@@ -10,9 +10,14 @@
         <td>{{list.status}}</td>
         <td>{{list.datacreazione}}</td>
         <td>{{list.datafine}}</td>
+        <td><input type="button" id="modifica" name="modifica" (click)="modifica(list.id)" value="modifica"></td>
         <td><input type="button" id="elimina" name="elimina" (click)="cancella(list.id)" value="cancella"></td>
 
         
+    </tr>
+    <tr>
+        <th><input type="button" id="nuovo" name="nuovo" value="aggiungi" (click)="inserisci()"></th>
+
     </tr>
 
 </table>

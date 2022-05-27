@@ -1,0 +1,17 @@
+<form  #newForm="ngForm" (submit)="insert(newForm)">
+
+    <label>todo </label>
+    <input type="text" name="todo" placeholder={{lista.todo}} #refTodo="ngModel" [ngModel]="todo">
+    <br>
+    <label>status </label>
+    <input type="text" name="status" placeholder={{lista.status}} #refStatus="ngModel" [ngModel]="status">
+    <br>
+    <label>datacreazione </label>
+    <input type="text" name="datacreazione" placeholder={{lista.datacreazione}} #refDataCreazione="ngModel" [ngModel]="datacreazione">
+    <br>
+    <label>datafine </label>
+    <input type="text" name="datafine" placeholder={{lista.datafine}} #refDataFine="ngModel" [ngModel]="datafine">
+    <br>
+    <input type="submit" id="nuovo" name="nuovo" value="Inserisci">
+
+</form>

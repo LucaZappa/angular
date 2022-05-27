@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ListServiceService } from 'src/app/core/services/list-service.service';
 import { Lista } from 'src/app/shared/model/list-model.model';
 
+// questa è la componente che si occupa di visualizzare e cancellare gli impegni e reindeirzza d altre due componenti
+// la modifica e l'inserimento 
 @Component({
   selector: 'fin-list-container',
   templateUrl: './list-container.component.html',
@@ -10,11 +12,21 @@ import { Lista } from 'src/app/shared/model/list-model.model';
 })
 export class ListContainerComponent implements OnInit {
 
-  constructor(private listService: ListServiceService, private router: Router) { }
+  constructor(private router: Router, private listService: ListServiceService) { }
 
   listList: Lista[] = [];
   loading: boolean = true;
 
+
+  inserisci(): void {
+    this.router.navigateByUrl('list/insert/');
+
+  }
+
+  modifica(id: number): void {
+    this.router.navigateByUrl('list/modify/'+id);
+
+  }
 
   cancella(id: number): void {
     this.listService.delete(id).subscribe(result => {
@@ -24,6 +36,7 @@ export class ListContainerComponent implements OnInit {
     }, error => console.log(error)
     )
   }
+
 
   ngOnInit(): void {
     
